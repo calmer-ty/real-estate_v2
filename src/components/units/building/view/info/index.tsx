@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 
 import NotListedLocationIcon from "@mui/icons-material/NotListedLocation";
+import { Tooltip } from "@mui/material";
+
 import InfoGraph from "./graph";
 import InfoTable from "./table";
 
@@ -24,10 +26,6 @@ export default function ViewInfo({ buildingType, activeMarker }: IViewInfoProps)
     setScroll(activeMarker !== undefined);
   }, [activeMarker]);
 
-  // const onClickClose = (): void => {
-  //   setActiveMarker(null);
-  // };
-
   if (!activeMarker)
     return (
       <S.UnMarker>
@@ -39,6 +37,7 @@ export default function ViewInfo({ buildingType, activeMarker }: IViewInfoProps)
         </div>
       </S.UnMarker>
     );
+
   return (
     <>
       <S.Container scroll={scroll}>
@@ -55,9 +54,20 @@ export default function ViewInfo({ buildingType, activeMarker }: IViewInfoProps)
               : DEFAULT_STRING_VALUE}
           </h3>
 
-          <p className="desc">
-            <span className="type">{buildingTypeEngToKor(buildingType)}</span> ・ {activeMarker.buildings[0].buildYear}년
-          </p>
+          <Tooltip
+            title={
+              <div style={{ display: "flex", flexDirection: "column" }}>
+                <p>{activeMarker.geocode.roadAddress}</p>
+                <p>{activeMarker.geocode.jibunAddress}</p>
+              </div>
+            }
+          >
+            <S.AddressButton className="search">주소 보기</S.AddressButton>
+          </Tooltip>
+
+          <S.InfoDesc>
+            {buildingTypeEngToKor(buildingType)} ・ {activeMarker.buildings[0].buildYear}년
+          </S.InfoDesc>
 
           <div className="bottom">
             <h4>

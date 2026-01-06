@@ -14,7 +14,7 @@ export default function InfoTable({ activeMarker }: { activeMarker: IGeocodeBuil
   return (
     <TableContainer
       component={Paper}
-      style={{ minHeight: "10rem", maxHeight: "19rem", padding: "0.5rem", border: "1px solid #e5e5e5", borderRadius: "0.75rem", backgroundColor: "#fff", boxShadow: "0 2px 6px rgba(0, 0, 0, 0.04)" }}
+      style={{ minHeight: "10rem", maxHeight: "18rem", padding: "0.5rem", border: "1px solid #e5e5e5", borderRadius: "0.75rem", backgroundColor: "#fff", boxShadow: "0 2px 6px rgba(0, 0, 0, 0.04)" }}
     >
       <Table aria-label="simple table">
         <TableHead>

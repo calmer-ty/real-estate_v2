@@ -1,6 +1,6 @@
-import { colors } from "@/commons/styles";
-
 import styled from "@emotion/styled";
+
+import { colors } from "@/commons/styles";
 
 export const Container = styled.aside<{ scroll: boolean }>`
   overflow-y: auto;
@@ -39,10 +39,12 @@ export const UnMarker = styled.div`
 `;
 
 export const Info = styled.div`
+  position: relative;
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
   padding: 1rem;
+  padding-top: 1.5rem;
   border: 1px solid #e5e5e5;
   border-radius: 0.75rem;
   background-color: #fff;
@@ -52,16 +54,6 @@ export const Info = styled.div`
     font-size: 0.95rem;
     font-weight: 600;
     color: #333;
-  }
-
-  .desc {
-    font-size: 0.85rem;
-    color: #666;
-
-    &.type {
-      font-weight: 500;
-      color: #444;
-    }
   }
 
   .bottom {
@@ -78,6 +70,32 @@ export const Info = styled.div`
         color: #666;
       }
     }
+  }
+`;
+export const AddressButton = styled.button`
+  position: absolute;
+  top: 0.6rem;
+  right: 0.9rem;
+  font-size: 0.75rem;
+  text-decoration: underline;
+  color: #1976d2;
+  cursor: pointer;
+
+  &:hover {
+    color: #0d47a1;
+  }
+`;
+
+export const InfoDesc = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+  color: #666;
+
+  &.type {
+    font-weight: 500;
+    color: #444;
   }
 `;
 
