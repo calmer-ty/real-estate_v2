@@ -22,6 +22,7 @@ export const UnMarker = styled.div`
   justify-content: center;
   align-items: center;
   gap: 1rem;
+  padding: 2rem;
   min-width: 24rem;
   background-color: #f9f9f9;
 
