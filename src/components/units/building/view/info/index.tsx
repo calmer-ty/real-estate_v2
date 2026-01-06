@@ -31,8 +31,12 @@ export default function ViewInfo({ buildingType, activeMarker }: IViewInfoProps)
   if (!activeMarker)
     return (
       <S.UnMarker>
-        <NotListedLocationIcon sx={{ color: "red", fontSize: 28 }} />
-        <span>지도 마커를 선택해주세요.</span>
+        <div className="inner">
+          <NotListedLocationIcon sx={{ color: "red", fontSize: 28 }} />
+          <p>
+            지도 <strong>마커</strong>를 선택해주세요.
+          </p>
+        </div>
       </S.UnMarker>
     );
   return (

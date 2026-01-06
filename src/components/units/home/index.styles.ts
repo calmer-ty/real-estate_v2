@@ -8,7 +8,7 @@ export const Container = styled.article`
   justify-content: center;
   align-items: center;
   position: relative;
-  height: calc(100vh - 3.75rem);
+  height: 100%;
   padding: 1rem;
   background-color: #e4f5ffff;
 `;

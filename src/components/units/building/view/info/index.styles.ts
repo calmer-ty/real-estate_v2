@@ -19,10 +19,23 @@ export const Container = styled.aside<{ scroll: boolean }>`
 export const UnMarker = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 1rem;
   justify-content: center;
   align-items: center;
-  width: 34rem;
+  gap: 1rem;
+  min-width: 24rem;
+  background-color: #f9f9f9;
+
+  .inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    padding: 4rem;
+    border-radius: 0.75rem;
+    background-color: #fff;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+  }
 `;
 
 export const Info = styled.div`
