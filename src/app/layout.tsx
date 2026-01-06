@@ -30,7 +30,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <Script src={`https://oapi.map.naver.com/openapi/v3/maps.js?ncpKeyId=${process.env.NEXT_PUBLIC_NCP_CLIENT_ID}&submodules=geocoder`} strategy="afterInteractive" />
+        <Script src={`https://oapi.map.naver.com/openapi/v3/maps.js?ncpKeyId=${process.env.NCP_CLIENT_ID}&submodules=geocoder`} strategy="afterInteractive" />
       </head>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         <AppRouterCacheProvider>

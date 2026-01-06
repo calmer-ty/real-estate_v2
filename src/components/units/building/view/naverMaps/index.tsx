@@ -34,7 +34,7 @@ export default function NaverMaps({ activeRegion, geocodeBuildings, loading, set
 
     // 1️⃣ 네이버 지도 스크립트
     const script = document.createElement("script");
-    script.src = `https://oapi.map.naver.com/openapi/v3/maps.js?ncpKeyId=${process.env.NEXT_PUBLIC_NCP_CLIENT_ID}&submodules=visualization`;
+    script.src = `https://oapi.map.naver.com/openapi/v3/maps.js?ncpKeyId=${process.env.NCP_CLIENT_ID}&submodules=visualization`;
     script.async = true;
 
     script.onload = () => {
