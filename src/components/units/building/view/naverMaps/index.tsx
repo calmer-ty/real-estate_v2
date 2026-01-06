@@ -133,8 +133,8 @@ export default function NaverMaps({ activeRegion, geocodeBuildings, setActiveMar
       }));
 
       clusterRef.current = new window.MarkerClustering({
-        minClusterSize: 2,
-        maxZoom: 14, // 이 줌 레벨 이하까지만 클러스터 유지
+        minClusterSize: 3,
+        maxZoom: 15, // 이 줌 레벨 이하까지만 클러스터 유지
         map: mapRef.current,
         markers: markersRef.current,
         disableClickZoom: false,
