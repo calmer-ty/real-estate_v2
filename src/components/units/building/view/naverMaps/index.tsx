@@ -8,14 +8,13 @@ import "./marker.css";
 interface INaverMapsProps {
   activeRegion: { city: string; district: string; code: string };
   geocodeBuildings: IGeocodeBuildings[];
-  loading: boolean;
   setActiveMarker: React.Dispatch<React.SetStateAction<IGeocodeBuildings | null>>;
 }
 interface IMapsServiceRes {
   v2: { addresses: [{ x: string; y: string }] };
 }
 
-export default function NaverMaps({ activeRegion, geocodeBuildings, loading, setActiveMarker }: INaverMapsProps) {
+export default function NaverMaps({ activeRegion, geocodeBuildings, setActiveMarker }: INaverMapsProps) {
   const mapRef = useRef<any>(null);
   const markersRef = useRef<any[]>([]);
   const activeMarkerRef = useRef<any>(null);
@@ -166,7 +165,7 @@ export default function NaverMaps({ activeRegion, geocodeBuildings, loading, set
   return (
     <>
       <div id="map" style={{ position: "relative", width: "100%", height: "100%" }}>
-        {loading && <LoadingSpinner />}
+        {geocodeBuildings.length === 0 && <LoadingSpinner />}
       </div>
     </>
   );

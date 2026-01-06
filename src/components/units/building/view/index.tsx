@@ -30,7 +30,7 @@ export default function BuildingView() {
 
       <div className="mapContent">
         <ViewInfo buildingType={buildingType} activeMarker={activeMarker} />
-        <NaverMaps activeRegion={activeRegion} geocodeBuildings={geocodeBuildings} loading={loading} setActiveMarker={setActiveMarker} />
+        <NaverMaps activeRegion={activeRegion} geocodeBuildings={geocodeBuildings} setActiveMarker={setActiveMarker} />
       </div>
     </S.Container>
   );

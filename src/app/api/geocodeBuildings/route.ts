@@ -13,7 +13,6 @@ export async function GET(req: Request) {
 
   try {
     const data = await getGeocodeBuildings({ regionCode, buildingType }); // 지역 데이터 처리 함수를 호출하고 결과를 기다립니다
-    console.log("🧪 GET getGeocodeBuildings", data);
     return NextResponse.json(data);
   } catch (err) {
     console.error(err);
