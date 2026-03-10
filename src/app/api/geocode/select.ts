@@ -1,5 +1,5 @@
-import { geocodeApi } from "./api";
 import { getGeocodeCache, setGeocodeCache } from "./cache";
+import { geocodeApi } from "./result";
 
 export const getSelectGeocode = async (address: string) => {
   const cacheKey = `geocode_${address}`;

@@ -38,9 +38,6 @@ export const buildingApi = async ({ regionCode, buildingType, dealYmd }: IBuildi
     // 2. 공공데이터의 '객체 vs 배열' 문제를 해결하는 핵심 로직 (공부 포인트!)
     const items = rawItems ? (Array.isArray(rawItems) ? rawItems : [rawItems]) : [];
 
-    // 3. 로그를 찍어서 데이터가 잘 오는지 확인해보세요
-    console.log(`[${dealYmd}] 가져온 데이터 개수:`, items.length);
-
     return items;
   } catch (error) {
     console.error("[buildingApi] error:", error);

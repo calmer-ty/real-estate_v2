@@ -19,7 +19,7 @@ export function useGeocodeBuildings({ buildingType, activeRegion }: IUseGeocodeB
 
       try {
         // 전체 위치 API 호출
-        const geocodeBuildingsRes = await axios.get<IGeocodeBuildings[]>("/api/geocodeBuildings", {
+        const geocodeBuildingsRes = await axios.get<IGeocodeBuildings[]>("/api/geocode", {
           params: { regionCode: activeRegion.code, buildingType },
         });
 

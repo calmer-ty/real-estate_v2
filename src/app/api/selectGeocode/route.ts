@@ -1,5 +1,5 @@
-import { getSelectGeocode } from "@/lib/geocode/select";
 import { NextResponse } from "next/server";
+import { getSelectGeocode } from "../geocode/select";
 
 export async function GET(req: Request) {
   const { searchParams } = new URL(req.url);
