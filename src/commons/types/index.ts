@@ -2,7 +2,7 @@
 export interface IRegionAPI {
   StanReginCd: [
     { head: [IRegionHeadTotalCount, IRegionHeadPageInfo] }, // 첫 번째 요소는 head
-    { row: IRegionItem[] } // 두 번째 요소는 row
+    { row: IRegionItem[] }, // 두 번째 요소는 row
   ];
 }
 
@@ -31,14 +31,14 @@ export interface IRegionItemFiltered {
 
 // 건물 API
 export interface IBuildingAPI {
-  response: {
-    body: {
-      items: {
-        item: IBuildingItem[]; // Item 배열 형태로 정의
+  response?: {
+    body?: {
+      items?: {
+        item?: IBuildingItem[]; // Item 배열 형태로 정의
       };
-      numOfRows: number;
-      pageNo: number;
-      totalCount: number;
+      numOfRows?: number;
+      pageNo?: number;
+      totalCount?: number;
     };
   };
 }

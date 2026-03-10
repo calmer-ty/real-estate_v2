@@ -1,6 +1,7 @@
-import { getBuildings } from "@/lib/building";
 import { NextResponse } from "next/server";
+import { getBuildings } from "./service";
 
+// GET 요청 처리
 export async function GET(req: Request) {
   const { searchParams } = new URL(req.url);
   const regionCode = searchParams.get("regionCode");

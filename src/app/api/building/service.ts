@@ -1,4 +1,4 @@
-import { buildingApiMonths } from "./api";
+import { buildingResult } from "./result";
 import { getBuildingsCache, setBuildingsCache } from "./cache";
 
 import type { IGetBuildingsProps } from "@/commons/types";
@@ -10,7 +10,7 @@ export const getBuildings = async ({ regionCode, buildingType }: IGetBuildingsPr
   if (cached !== undefined) return cached;
 
   try {
-    const res = await buildingApiMonths({ regionCode, buildingType });
+    const res = await buildingResult({ regionCode, buildingType });
     setBuildingsCache(cacheKey, res);
 
     return res;
